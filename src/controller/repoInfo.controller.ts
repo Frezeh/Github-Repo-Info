@@ -4,17 +4,16 @@ import {
   ReadRepoInfoInput,
 } from "../schema/repoInfo.schema";
 import { getAllRepoInfo, getRepoInfo } from "../service/repoInfo.service";
+import parseParameter from "../utils/params";
 
 export async function getRepoInfoHandler(
   req: Request<ReadRepoInfoInput["params"]>,
   res: Response
 ) {
-  const username = req.params.repo_name;
-  // @ts-ignore
-  const path: string = req.params[0];
+  
+  const {username} = parseParameter(req)
+  const {repoName} = parseParameter(req)
 
-  // remove first character from params path
-  const repoName = path.substring(1);
   const response = await getRepoInfo(username, repoName);
 
   if (!response) {

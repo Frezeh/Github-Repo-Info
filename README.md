@@ -24,6 +24,7 @@
 
 - Run `yarn test` to test the application
 
+
 ## API Documentation
 
 http://localhost:3000/docs

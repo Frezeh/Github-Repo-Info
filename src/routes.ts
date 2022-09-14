@@ -41,12 +41,6 @@ function routes(app: Express) {
    *        in: path
    *        description: The name of the repository
    *        required: true
-   *        schema:
-   *          type: string
-   *          format: path
-   *        style: simple
-   *        explode: true
-   *        x-multiSegment: true
    *     responses:
    *       200:
    *         description: Success
