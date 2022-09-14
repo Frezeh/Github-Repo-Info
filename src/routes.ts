@@ -31,16 +31,12 @@ function routes(app: Express) {
 
   /**
    * @openapi
-   * '/repo_info/{username}/{repo_name}':
+   * '/repo_info/{repo_name}':
    *  get:
    *     tags:
    *     - Get Repo Info
    *     description: Return a single repository information by the repository name
    *     parameters:
-   *      - name: username
-   *        in: path
-   *        description: The organization or owner name
-   *        required: true
    *      - name: repo_name
    *        in: path
    *        description: The name of the repository
