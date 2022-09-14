@@ -41,6 +41,12 @@ function routes(app: Express) {
    *        in: path
    *        description: The name of the repository
    *        required: true
+   *        schema:
+   *          type: string
+   *          format: path
+   *        style: simple
+   *        explode: true
+   *        x-multiSegment: true
    *     responses:
    *       200:
    *         description: Success
@@ -61,7 +67,7 @@ function routes(app: Express) {
 
   /**
    * @openapi
-   * '/repo_info/{username}':
+   * '/all_repo_info/{username}':
    *  get:
    *     tags:
    *     - Get All Repo Info

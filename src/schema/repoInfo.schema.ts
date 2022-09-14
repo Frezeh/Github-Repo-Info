@@ -16,7 +16,7 @@ import { object, string, TypeOf } from "zod";
  *         RepoDescription:
  *           type: string
  *         NumberOfStars:
- *           type: string
+ *           type: number
  *     AllRepoInfo:
  *       type: array
  *       items:
@@ -27,7 +27,7 @@ import { object, string, TypeOf } from "zod";
  *            RepoDescription:
  *              type: string
  *            NumberOfStars:
- *              type: string
+ *              type: number
  */
 
 const params = {

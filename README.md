@@ -1,10 +1,6 @@
 # Github Repo Info
 > An API endpoint that returns the number of stars and description for a given Github repository. “Github Repo Info”
 
-## API Documentation
-
-http://localhost:3000/docs
-
 ## Getting Started
 
 ### Tools/Stacks
@@ -28,6 +24,9 @@ http://localhost:3000/docs
 
 - Run `yarn test` to test the application
 
+## API Documentation
+
+http://localhost:3000/docs
 
 
 ## Author
