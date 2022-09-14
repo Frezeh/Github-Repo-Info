@@ -26,7 +26,7 @@ http://localhost:3000/docs
 
 ### Run test
 
-- Run `yarn jest` to test the application
+- Run `yarn test` to test the application
 
 
 

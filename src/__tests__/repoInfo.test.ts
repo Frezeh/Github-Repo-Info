@@ -1,12 +1,6 @@
 import supertest from "supertest";
 import mockServer from "../utils/server";
 
-// jest.mock('@octokit/rest')
-// const request = () => new Promise((resolve, reject) => {
-//   resolve({ status: 200 });
-// })
-// Octokit.mockImplementation(() => ({ request }))
-
 const app = mockServer();
 const repo_name = "Frezeh/NovaAssetManagement-APP";
 const username = "Frezeh";
