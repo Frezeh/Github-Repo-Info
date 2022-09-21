@@ -1,18 +1,21 @@
-import {Parse} from "../utils/parseData";
-import {readFileSync} from "fs";
+import { Parse } from "../utils/parseData";
+import { readFileSync } from "fs";
+import { join } from "path";
 
-const content = readFileSync("../../industry_sic.txt");
+function syncReadFile(filename: string) {
+  const result = readFileSync(join(__dirname, filename), "utf-8");
 
-const data = content.toString();
+  return result;
+}
 
-export const searchResults = async (query: any) => {
-  try {
-    let result = Parse(data);
+export const searchResults = (query: string) => {
+  let data = syncReadFile("../../industry_sic.txt");
 
-    let search = result.filter((res) => res.toLowerCase().startsWith(query.toLowerCase()))
+  let result = Parse(data);
 
-    return search;
-  } catch (e) {
-    console.log(e);
-  }
+  let search = result.filter((res) =>
+    res.toLowerCase().startsWith(query.toLowerCase())
+  );
+
+  return search;
 };

@@ -8,6 +8,7 @@ import logger from "./utils/logger";
 import routes from "./routes";
 import swaggerDocs from "./utils/swagger";
 import limiter from "./utils/rateLimiter";
+import {readFileSync} from "fs";
 
 const port = config.get<number>("port") || 3000;
 
