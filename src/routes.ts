@@ -3,11 +3,13 @@ import {
   getAllRepoInfoHandler,
   getRepoInfoHandler,
 } from "./controller/repoInfo.controller";
+import { getSearchResultHandler } from "./controller/search.controller";
 import validateResource from "./middleware/validateResource";
 import {
   getAllRepoInfoSchema,
   getRepoInfoSchema,
 } from "./schema/repoInfo.schema";
+import { getSearchSchema } from "./schema/search.schema";
 
 function routes(app: Express) {
   /**
@@ -87,6 +89,13 @@ function routes(app: Express) {
     "/all_repo_info/:username",
     validateResource(getAllRepoInfoSchema),
     getAllRepoInfoHandler
+  );
+
+  // search result route
+  app.get(
+    "/search",
+    validateResource(getSearchSchema),
+    getSearchResultHandler
   );
 }
 

@@ -18,7 +18,7 @@
 - Install all dependencies `yarn`
 - Run `yarn dev` to start the application
 - Add .env variables eg. env.example
-- Access the API on [http:localhost:3000](http:localhost:3000)
+- Access the API on [http://localhost:3000](http://localhost:3000)
 
 ### Run test
 
